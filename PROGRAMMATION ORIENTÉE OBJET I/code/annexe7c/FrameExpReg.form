@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="packageannexe7.FrameExpReg">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FlowLayout" hgap="35" vgap="15" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="480" height="200"/>
+    </constraints>
+    <properties>
+      <minimumSize width="480" height="200"/>
+      <preferredSize width="480" height="200"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="62378" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="14"/>
+          <preferredSize width="175" height="16"/>
+          <text value="Nom d'usager:"/>
+        </properties>
+      </component>
+      <component id="dc731" class="javax.swing.JTextField" binding="champNom">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="11"/>
+          <preferredSize width="165" height="24"/>
+        </properties>
+      </component>
+      <component id="2022a" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="14"/>
+          <preferredSize width="175" height="16"/>
+          <text value="Mot de passe :"/>
+        </properties>
+      </component>
+      <component id="e2eb1" class="javax.swing.JTextField" binding="champMotPasse">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="11"/>
+          <preferredSize width="165" height="24"/>
+        </properties>
+      </component>
+      <component id="20767" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="14"/>
+          <preferredSize width="175" height="16"/>
+          <text value="Adresse courriel :"/>
+        </properties>
+      </component>
+      <component id="b11d" class="javax.swing.JTextField" binding="champCourriel">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="11"/>
+          <preferredSize width="165" height="24"/>
+        </properties>
+      </component>
+      <component id="24a60" class="javax.swing.JButton" binding="bouton">
+        <constraints/>
+        <properties>
+          <font name="DejaVu Sans Mono" size="14"/>
+          <minimumSize width="125" height="24"/>
+          <preferredSize width="125" height="24"/>
+          <text value="S'inscrire"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
