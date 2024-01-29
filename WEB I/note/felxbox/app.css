@@ -1,0 +1,114 @@
+/* html {
+    font-size: 62.5%;
+} */
+
+h1 {
+    background-color: blueviolet;
+    color: white;
+    font-weight: 800;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contenant {
+    display: flex;
+    border: black 1px solid;
+    padding: 0.5rem;
+
+    height: 100px;
+
+    flex-direction:row;
+    flex-wrap:nowrap;
+    /* justify-content:space-around; */
+    align-items:baseline;
+}
+
+main {
+    border: black 1px solid;
+    padding: 0.5rem;
+    display: flex;
+    /* height: 600px; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*justify-content: space-around;*/
+}
+
+main div.contenant:nth-child(1) {
+    background-color: cyan;    
+    order: 10;
+}
+
+main div.contenant:nth-child(2) {
+    background-color: red;    
+    order: 30;
+}
+
+main div.contenant:nth-child(3) {
+    background-color: lightgreen;    
+    order: 20;
+}
+
+main div.contenant:nth-child(4) {
+    background-color: violet;    
+    order: 0;
+}
+
+main div.contenant:nth-child(5) {
+    order: 15;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    gap: 5rem;
+}
+
+/* .boite.verte {
+    background-color: green;
+}
+
+.verte {
+    font-size: 500%;
+} */
+
+
+
+.boite:nth-child(2n) {
+    align-self: center;
+}
+
+.boite:first-child,.boite:last-child {
+    background-color: green;
+}
+
+#box1 {
+    background-color: blue;
+    color: white;
+   /*  width: 500px; */
+}
+
+#box2 {
+    background-color: turquoise;
+    /* width: 200px; */
+    /* font-size: 300%; */
+   /*  align-self: center; */
+}
+
+#box3 {
+    background-color: aquamarine;
+    /* width: 500px; */
+}
+
+#box4, #box5 {
+    width: 100px;
+}
