@@ -1,0 +1,17 @@
+﻿  Clients.cpp
+  cvm23.cpp
+  flux_io.cpp
+  Livres.cpp
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\Livres.cpp(95,18): warning C4244: 'initialisation' : conversion de 'std::streamoff' en 'char', perte possible de données
+  Location.cpp
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\Location.cpp(69,31): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\Location.cpp(70,34): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\Location.cpp(98,25): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+  main.cpp
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\main.cpp(75,11): error C2065: 'client_id' : identificateur non déclaré
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\main.cpp(75,22): error C2065: 'livre_position' : identificateur non déclaré
+  test.cpp
+  utils.cpp
+  Génération de code en cours...
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\utils.cpp(65): warning C4715: 'NbreJoursMois' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\Benja\OneDrive\Bureau\Bibliotheque - Etu\Bibliotheque\Location.cpp(120): warning C4715: 'Retour' : les chemins de contrôle ne retournent pas tous une valeur

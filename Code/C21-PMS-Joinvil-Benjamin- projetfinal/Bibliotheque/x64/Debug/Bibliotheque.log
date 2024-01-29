@@ -1,0 +1,12 @@
+﻿  Clients.cpp
+  cvm23.cpp
+  flux_io.cpp
+  Livres.cpp
+  Location.cpp
+C:\Users\benjamin\Desktop\C21-PMS-Joinvil-Benjamin- projetfinal\Bibliotheque\Location.cpp(85,59): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+  test.cpp
+  utils.cpp
+  Generating Code...
+C:\Users\benjamin\Desktop\C21-PMS-Joinvil-Benjamin- projetfinal\Bibliotheque\utils.cpp(65): warning C4715: 'NbreJoursMois': not all control paths return a value
+  Bibliotheque.vcxproj -> C:\Users\benjamin\Desktop\C21-PMS-Joinvil-Benjamin- projetfinal\x64\Debug\Bibliotheque.exe

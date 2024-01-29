@@ -1,0 +1,5 @@
+﻿  fonction.cpp
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction\fonction.cpp(15,9): warning C4244: '+=' : conversion de 'double' en '__int64', perte possible de données
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction\fonction.cpp(35,20): warning C4018: '<=' : incompatibilité signed/unsigned
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction\fonction.cpp(50,22): warning C4244: 'initialisation' : conversion de 'double' en '__int64', perte possible de données
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction\fonction.cpp(40): error C4716: 'Motlepluslong' : doit retourner une valeur

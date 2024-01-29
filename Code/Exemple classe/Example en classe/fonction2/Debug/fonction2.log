@@ -1,0 +1,5 @@
+﻿  fonction2.cpp
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction2\fonction2.cpp(50,31): warning C4018: '>' : incompatibilité signed/unsigned
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction2\fonction2.cpp(58,18): error C2440: 'return' : impossible de convertir de 'int' en 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction2\fonction2.cpp(58,18): message : Aucun constructeur n'a pu prendre le type de source, ou la résolution de la surcharge du constructeur était ambiguë
+X:\vieux\session 2\PROGRAMMATION II\Code\Exemple classe\Example en classe\fonction2\fonction2.cpp(63,10): error C2059: erreur de syntaxe : ';'
