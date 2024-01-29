@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- use methode = "post"  for servers -->
+    <form action="result.html" method="get" enctype="multipart/form-data"> 
+        <div>
+        <label for="name">Name</label>
+        <!-- highlignt the element with id and for -->
+        <input type="text" name="name" id="name" placeholder="Username" required >
+    </div>
+    <div>
+        <label for="emai">Email</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div >
+        <label for="age">Age</label>
+    <input type="number" name="age" id="age" min="1" max="200" step="5">
+    </div>  
+    <label for="date">Birtday</label>
+    <input type="date" name="date" id="date">
+    <div>
+        <label>password
+        <input type="password" name="password" required>
+        <!-- si on ne veut pas le for and id on rajoute le inpute dans le label -->
+    </label>
+    </div>
+    <div>
+        <label for="male">male</label>
+        <input type="radio" name="gender" id="male" value="male">"
+    </div>
+    <div>
+        <label for="female">female</label>
+        <input type="radio" name="gender" id="female" value = "male">"
+    </div>
+    <div>
+        Favorite food
+        <div>
+            <label for="banana">Banana</label>
+            <input type="checkbox" name="banana" id="bamama">
+        </div>
+        <div>
+            <label for="apple">apple</label>
+            <input type="checkbox" name="apple" id="apple">
+            
+        </div>
+    <div>
+        <label for="bio">bio</label>
+        <textarea id="bio" name="bio"></textarea>
+        <div>
+            <label for="file"> file</label>
+            <input id="file" type="file" name="file">
+        </div>
+    </div>
+    <input type="hidden" name="hidden" value="hi">
+        <div>
+            <label for="eyecolour">eyecolour</label>
+            <select name="eyecolour" id="eyecolour" multiple>
+                <option value="Green">green</option>
+                <option label="red" value="red">red</option>
+            </select>
+        </div>
+    <div>
+        <label for="phone">phone</label>
+        <input type="tel" name="phone" id="phone"> 
+    </div>
+    <div>
+        <button type="reset">Reset</button>
+        <button type="submit" >submit</button>
+    </div>
+    </form>
+</body>
+</html>

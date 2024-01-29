@@ -1,0 +1,74 @@
+/* Les sélecteurs (comment cibler nos balises) */
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: Arial;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 100%;
+    color: white;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color:white;
+    font-size:15px;
+    transition: all 1s ease-out;
+}
+
+a:hover {
+    font-size:25px;
+    color:#8ff; /*#88ffff*/
+    text-decoration: none;
+}
+
+/* <div class="header"> */
+.header {
+    padding-top:20px;
+    height: 60px;
+    background-color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-section {
+    padding-top: 50px;
+    background-color: rgba(50, 50, 50, 0.2);
+    box-shadow: 0 0px 10px black;   
+}
+
+.main-section h2 {
+    text-shadow: 0 0 10px black;
+}
+
+ul li {
+    list-style-position: inside;
+    list-style-type: none;
+    margin-bottom:10px;
+}
+
+tr td {
+    vertical-align: top;
+}
+
+/* # = id, . = classe */
+#footer {
+    text-align: center;
+    font-size: 0.8rem; /* 80% de la taille du texte de la page */
+}
+
+/* div, p {
+    background-color: green;
+} */

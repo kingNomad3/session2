@@ -1,0 +1,37 @@
+body{
+    color: red;
+}
+.title{
+    font-size: 6rem;
+}
+
+.subtile{
+    font-size: 4rem;
+}
+
+@media all and (max-with: 500px){
+    body{
+        color: blue;
+        /* only when is is 500px<= */
+    }
+}
+
+@media print{
+    body{
+        color: blue;
+        /* only when printing */
+    }
+}
+
+/* .title{
+     color: green;
+    will stay red because it reads top to bottom read the last one 
+}
+ */
+/*  the coma "," is a or  and "and" for and  */
+ @media (orientation: landscape), (max-with: 500px){
+
+    .subtile{
+        color: green;
+    }
+ }

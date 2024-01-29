@@ -1,0 +1,36 @@
+.flex{ 
+    display: flex;
+    background-color: rgb(115, 128, 0);
+    color: white;
+    flex-direction: column-reverse;
+}
+
+.flex div:nth-child(1) {
+    display: flex;
+    align-self: flex-end;
+    gap: 30rem;
+    background-color: red;
+}
+.flex div:nth-child(2) {
+    display: flex;
+    align-self: flex-end;
+    gap: 5rem;
+    background-color: green;
+}
+.flex div:nth-child(3) {
+    display: flex;
+    align-self: flex-start;
+    gap: 5rem;
+    background-color: orange;
+
+}
+.flex div:nth-child(4) {
+    display: flex;
+    align-self: flex-end;
+    gap: 5rem;
+    background-color: purple;
+}
+#e2 {
+    display: flex;
+    align-items: flex-start;
+}

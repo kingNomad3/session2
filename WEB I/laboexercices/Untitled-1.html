@@ -1,0 +1,80 @@
+<!DOCTYPE html><!-- //html:5- quel version de html
+ --> 
+<html lang="fr"><!-- donne la langue au moteur de recherceh-->
+<head>
+    <meta charset="UTF-8"> <!-- une genre de table ascii, tout le monde faire tu UTF-8 partout-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices</title>
+</head><!-- le heaed n.est pas afficher c'est le descriptif-->
+<body>
+
+<main> <!-- //est un div --><!-- div aurait plus etre remplacer par main aussi foot et nav le moteur de recherche s'en fou,mais pas nous-->
+    <!-- controle é permet de faire des commentaire -->
+<!-- Bloc 1-->
+<section id="bloc_1" style=border-bottom: 2px dashed rgb(150,20,20)"><!-- remplace bgcolour, border-bottom: 2px solid, border-bottom: 2px dashed rgb(150,20,20), border-bottom: 2px dashed rgba(150,20,20, 0.25) green;color:blue le dernier chiffre est alpha, border-bottom: 2px dashed rgba(150,20,20, 0.25); color: #ff000; -->
+    <h1>Les espaces en HTML</h1>
+<p> En termes d'espaces, en HTML, 2+2 =1 </p>
+<p>&emsp;&emsp;&emsp;&emsp; Par contre, ce text<br>&emsp;&emsp;<!-- A la place de emsp on peut utiliser <pre> et faire les      espaces    a la main </pre>-->
+&emsp;&emsp;&emsp; semble contredire cette regle</p>
+<p>
+    <h2> 
+    <p>Toutes les espaces sont equivalent a ue seule espace.<br><br>
+        &emsp; &emsp; <a href ="https://fr.wikipedia.org/wiki/Espace_(typographie)"> Espace (typograpgique) - Wikipedia </a><br><br>
+        &emsp; &emsp; Une espace (nom femin in) est, en typographique, un caractere particulier 
+         qui permet d'inserer un intervalle vide dans le texte. L'espace sert le plus <br> 
+       &emsp; &emsp; souvent de separateur de mots. Une espace est parfois appelee un blanc.
+    </p>
+</p>
+</section>
+<!-- Bloc 2-->
+<p>Il y a toutes sorte d'espace</p>
+    <br>
+
+    <ul>
+        <li>espace</li>
+        <li>espace insecable</li>
+        <li>espace cadratin</li>
+        <li>ect.</li>
+    </ul>
+
+<section id="Bloc_2" style="background-color: rgba(30,30,03,0.8);">
+    <!--Sous bloc A-->
+    <div id="Sous_Section">
+        <div id="bloc_2_b" class="sous-section">
+            <h3>Table de conversion</h3>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th colspan="2" align="left">Nom</th>
+                        <th rowspan="2">Code</th>
+                    </tr>
+                    <tr>
+                        <th align="left">Genre</th>
+                        <th align="left">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>espace</td>
+                        <td></td>
+                        <td>&amp;#32;</td>
+                    </tr>
+                    <tr>
+                        <td>espace</td>
+                        <td>insécable</td>
+                        <td>&amp;#160; ou &amp;#xA0; ou &amp;nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>espace</td>
+                        <td>cadratin</td>
+                        <td>&amp;#8195; ou &amp;#x2003; ou &amp;emsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>

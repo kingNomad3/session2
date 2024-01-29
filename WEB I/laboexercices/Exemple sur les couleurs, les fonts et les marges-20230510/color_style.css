@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap');
+
+#_1 {
+    color: #FF8F00;
+}
+
+#_1 p {
+    color: blue;
+}
+
+/* #_1 {
+    color: green;
+} */
+
+#_2 {
+    background-color: hotpink;
+}
+
+#_2 p {
+    background-color: khaki;
+}
+
+#_2 div {
+    background-color: lightblue;
+}
+
+#_3 {
+    background-color: hotpink;
+    color: blue;
+}
+
+#_3 p {
+    background-color: khaki;
+}
+
+body {
+    background-image: url("fleur.jpg");
+    background-repeat: repeat /*no-repeat*/;
+    background-size: 20%/*contain*/;
+    background-color:lavender;
+}
+
+#_4 {
+    background-color: lawngreen;
+    /* border-style: solid;
+    border-width: 1rem;
+    border-color: magenta; */
+
+    border: solid 1rem magenta;
+}
+
+#_5 {
+    background-color: lawngreen;
+
+    border: solid 1rem;
+    border-top-color: red;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: yellow;
+}
+
+.bg {
+    background-color: yellow;
+    border: solid 0.25rem blue;
+}
+
+.bg h1 {
+    background-color: violet;
+    border: solid 0.25rem green;
+}
+
+.bg div {
+    background-color: rosybrown;
+    border: solid 0.25rem lime;
+}
+
+.bg p {
+    background-color: firebrick;
+    border: solid 0.25rem whitesmoke;
+}
+
+#_6 {
+    margin: 1rem;
+}
+
+#_6 h1 {
+    margin-top: 0;
+}
+
+#_6 div {
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+}
+
+#_6 p {
+    padding: 2rem;
+}
+
+body {
+    font-family: 'DynaPuff', cursive;
+}
+
+#_7 {
+    background-color: whitesmoke;
+    padding: 0.25rem;
+
+   /*  font-family: 'Courier New', Courier, monospace; */
+   font-family: 'Nunito', sans-serif;
+}
+
+#_7 h1 {
+    font-family: 'Courier New', Courier, monospace;
+
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1rem;
+    font-variant: small-caps;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+a:visited {
+    color:hotpink;
+}
+
+a:focus, a:hover {
+    color: khaki;
+}       
