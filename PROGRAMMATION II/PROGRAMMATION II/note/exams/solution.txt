@@ -1,0 +1,292 @@
+Exercice sur les tableaux et les fonctions — Solution
+Par Godefroy Borduas pour le cours 420-C21-IN (Hiver 2022)
+
+Exercice 1
+À partir du code suivant, donnez le résultat de l'exécution.
+
+#include <iostream>
+using namespace std;
+
+int n = 10, q = 2;
+
+int foo(int);
+void bar(int);
+
+void main(void) {
+    int q = 5;
+    n = foo(q);
+    cout << "Main : n = " << n << ", q = " << q << "\n";
+    bar(2);
+}
+
+int foo(int p) {
+    int q = p * n;
+    cout << "Foo : n = " << n << ", q = " << q << "\n";
+    return q;
+}
+
+void bar(int p) {
+    cout << "Bar : n = " << n << ", q = " << q << ", p = " << p << "\n";
+}
+Solution
+La console affichera les lignes suivantes :
+
+Foo : n = 10, q = 50
+Main : n = 50, q = 5
+Bar : n = 50, q = 2, p = 2
+Exercice 2
+Écrivez une fonction, sans argument ou valeur de retour, qui affiche le nombre d'appel réalisés à la fonction depuis le lancement du programme. Oubliez le prototype.
+
+Solution
+void foo(void) {
+    static int NbAppel;
+    NbAppel++;
+    cout << "Cette fonction a été appelée " << NbAppel << " fois.\n";
+}
+Exercice 3
+Écrivez une fonction qui calcule le plus grand diviseur commun grâce à l'algorithme d'Euclide.
+
+Solution
+int Euclide(int a, int b) {
+    int t;
+    while (b != 0) {
+        t = b;
+        b = a % b;
+        a = t;
+    }
+    return a;
+}
+Exercice 4
+Écrivez une fonction qui calcul le plus petit multiplicateur commun à l'aide du plus grand diviseur commun.
+
+Solution
+int PPCM(int a, int b) {
+    int mult = a * b;
+    if (mult < 0) mult *= -1;
+    return mult / Euclide(a, b);
+}
+Exercice 5
+Écrivez une fonction qui ajoute, par référence, un nombre entier 
+𝑝
+p au nombre entier 
+𝑛
+n. Cette fonction n'a pas de retour.
+
+Solution
+void ajoute(int& n, int p) {
+    n += p;
+}
+Exercice 6
+Écrivez une fonction qui recherche, dans un tableau quelconque de nombre flottant, la plus grande valeur et qui retourne sa position.
+
+Solution
+int Max(float Tab[], int N) {
+    int maxPos = 0;
+    for(int i = 0; i < N; i++) {
+        if(Tab[i] > Tab[maxPos])
+            maxPos = i;
+    }
+
+    return maxPos;
+}
+Exercice 6
+Écrivez une fonction qui recherche, dans un tableau quelconque d'entier, la plus petite valeur multiple de 3 et qui retourne sa position. Si le tableau ne contient pas de multiple de 3, elle doit retourner -1;
+
+Solution
+int MinMult3(int Tab[], int N) {
+    int minPos = -1;
+    for (int i = 0; i < N; i++) {
+        if (Tab[i] % 3 == 0) {
+            // || est une évaluation court-circuit.
+            if (minPos == -1 || Tab[i] < Tab[minPos])
+                minPos = i;
+        }
+    }
+    return minPos;
+}
+Exercice 7
+Prenez la suite suivante :
+
+𝑅
+(
+𝑥
+>
+2
+)
+=
+𝑅
+(
+𝑥
+−
+1
+)
+×
+𝑅
+(
+𝑥
+−
+2
+)
+−
+2
+×
+𝑅
+(
+𝑥
+−
+3
+)
+R(x>2)=R(x−1)×R(x−2)−2×R(x−3)
+𝑅
+(
+2
+)
+=
+2
+𝑅
+(
+1
+)
+=
+5
+𝑅
+(
+0
+)
+=
+1
+𝑅
+(
+𝑥
+<
+0
+)
+=
+0
+R(2)=2R(1)=5R(0)=1R(x<0)=0
+Exercice 7.A
+Écrivez une fonction qui calcule, récursivement, la suite précédente.
+
+Solution
+void R(int x) {
+    if (x < 0) return 0;
+    else if (x == 0) return 1;
+    else if (x == 1) return 5;
+    else if (x == 2) return 2;
+    else
+        return R(x - 1) * R(x - 2) - 2 * R(x - 3);
+}
+Exercice 7.B
+Écrivez une fonction qui remplit un tableau d'entier avec 
+𝑁
+N termes de la suite. Cette fonction doit commencer à l'indice 
+0
+0 et utiliser la fonction précédente.
+
+Solution
+int TableauR(int Tab[], int N) {
+    for(int i = 0; i < N; i++) {
+        Tab[i] = R(i);
+    }
+}
+Exercice 7.C**
+Récrivez les fonctions R et TableauR de façon à réutiliser les valeurs précédentes. Vous devez toujours utiliser deux fonctions. De plus, seule la fonction TableauR contient la taille du tableau.
+
+Solution
+void Rprime(int x, int Tableau[]) {
+    if (x == 0) Tableau[0] = 1;
+    else if (x == 1) Tableau[1] = 5;
+    else if (x == 2) Tableau[2] = 2;
+    else
+        Tableau[x] = Tableau[x - 1] * Tableau[x - 2] - 2 * Tableau[x - 3];
+}
+
+int TableauRprime(int Tab[], int N) {
+    for(int i = 0; i < N; i++) {
+        Tab[i] = R(i, Tab);
+    }
+}
+Exercice 8
+Écrivez une fonction qui reçoit deux tableaux d'entier t1 et t2. Les deux tableaux ont la même taille. Dans cette fonction, vous devez recopier tous les éléments de t1 qui sont un nombre impair et un multiple de 5 dans le tableau t2. Enfin, l'excédent du tableau t2 qui ne contient par de valeur copiée doit être initialisé à 0.
+
+Solution
+void Copie(int t1[], int t2[], int N) {
+    int j = 0;
+    for(int i = 0; i < N; i++)
+        if (t1[i] % 2 == 1 && t1[i] % 5 == 0) {
+            t2[j] = t1[i];
+            j++;
+        }
+    
+    for (; j < N; j++)
+        t2[j] = 0;
+}
+Exercice 9
+Il existe plusieurs algorithmes de tri. L'algorithme de tri rapide est très simple à implanté. Son pseudo-code est le suivant :
+
+fonction partitionner(tableau T, entier premier, entier dernier, entier pivot)
+    échanger T[pivot] et T[dernier]  // échange le pivot avec le dernier du tableau , le pivot devient le dernier du tableau
+    j := premier
+    pour i de premier à dernier - 1 // la boucle se termine quand i = (dernier-1).
+        si T[i] <= T[dernier] alors
+            échanger T[i] et T[j]
+            j := j + 1
+    échanger T[dernier] et T[j]
+    renvoyer j
+
+fonction tri_rapide(tableau T, entier premier, entier dernier)
+        si premier < dernier alors
+            pivot := choix_pivot(premier, dernier)
+            pivot := partitionner(T, premier, dernier, pivot)
+            tri_rapide(T, premier, pivot-1)
+            tri_rapide(T, pivot+1, dernier)
+Le pivot est choisi aléatoirement dans l'intervalle. Implantez ces deux fonctions en C++ pour un tableau de nombre flottant.
+
+Solution
+int choix_pivot(int a, int b) {
+    srand(time(NULL));
+    return rand() * b + a;
+}
+
+int echange(float T[], int a, int b) {
+    float temp = T[a];
+    T[a] = T[b];
+    T[b] = temp;
+}
+
+int partitionner(float T[], int a, int b, int pivot) {
+    echange(T, pivot, b);
+    int j = a;
+    for(int i = a; i < b; i++) {
+        if (T[i] <= T[b]) {
+            echange(T, i, j);
+            j++;
+        }
+    }
+    echange(T, b, j);
+    return j;
+}
+
+int tri_rapide(float T[], int a, int b) {
+    if (a < b) {
+        int pivot = choix_pivot(a, b);
+        pivot = partitionner(T, a, b, pivot);
+        tri_rapide(T, premier, pivot - 1);
+        tri_rapide(T, pivot+1, dernier);
+    }
+}
+Exercice 10
+En mathématique, la médiane représente la tendance centrale dans une série de données. Écrivez une fonction Mediane qui retourne la valeur médiane pour un tableau de 
+𝑁
+N nombres flottants.
+
+Solution
+float Mediane(float Tab[], int N) {
+    tri_rapide(Tab, 0, N);
+    if (N % 2 == 1)
+        return Tab[((N + 1) / 2) - 1];
+    else {
+        int centre = ((N + 1) / 2) - 1;
+        return (Tab[centre] + Tab[centre + 1]) / 2;
+    }
+}
